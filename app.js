@@ -116,6 +116,21 @@ loginBtn.addEventListener('click', async () => {
   await iniciarAplicativo();
 });
 
+googleBtn.addEventListener('click', async () => {
+  googleBtn.disabled = true;
+  googleBtn.textContent = 'Abrindo o Google...';
+
+  const { error } = await sb.auth.signInWithOAuth({
+    provider: 'google'
+  });
+
+  if (error) {
+    googleBtn.disabled = false;
+    googleBtn.textContent = '🌐 Continuar com Google';
+    showAuthMessage(traduzirErroAuth(error));
+  }
+});
+
 
 signupBtn.addEventListener('click', async () => {
   const name = authName.value.trim();
