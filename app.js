@@ -24,6 +24,7 @@ const authEmail = document.getElementById('authEmail');
 const authPassword = document.getElementById('authPassword');
 
 const loginBtn = document.getElementById('loginBtn');
+const googleBtn = document.getElementById('googleBtn');
 const signupBtn = document.getElementById('signupBtn');
 const logoutBtn = document.getElementById('logoutBtn');
 
